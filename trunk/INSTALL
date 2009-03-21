@@ -1,2 +1,5 @@
-qmake winpathed.pro && mingw32-make release
+1) install Qt4
+2) build with:
+    qmake winpathed.pro && mingw32-make release
+3) run release\winpathed.exe 
 
