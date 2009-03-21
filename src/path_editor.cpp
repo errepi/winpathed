@@ -116,15 +116,15 @@ void PathEditor::showMessage()
  */
 void PathEditor::itemAdd()
 {
-	QFileDialog dialog(this);
-	dialog.setFileMode(QFileDialog::DirectoryOnly);
-	dialog.setModal(true);
-	dialog.setDirectory("C:");
+    QFileDialog dialog(this);
+    dialog.setFileMode(QFileDialog::DirectoryOnly);
+    dialog.setModal(true);
+    dialog.setDirectory("C:");
 
-	if (dialog.exec()) {
+    if (dialog.exec()) {
         QStringList filenames = dialog.selectedFiles();
         listWidget->addItems(filenames);
-	}
+    }
 }
 
 /**
