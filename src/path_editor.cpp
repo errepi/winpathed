@@ -91,23 +91,23 @@ PathEditor::PathEditor(QWidget *parent, Qt::WindowFlags f) : QDialog(parent, f)
 
 QPushButton* PathEditor::initButton(const char *iconFilename)
 {
-	QPushButton *b = new QPushButton;
-	QIcon icon(iconFilename);
-	b->setIcon(icon);
-	b->setFlat(true);
-	b->setMinimumSize(18, 18);
-	b->setMaximumSize(18, 18);
-	return b;
+    QPushButton *b = new QPushButton;
+    QIcon icon(iconFilename);
+    b->setIcon(icon);
+    b->setFlat(true);
+    b->setMinimumSize(18, 18);
+    b->setMaximumSize(18, 18);
+    return b;
 }
 
 void PathEditor::showError(const QString& msg)
 {
-	QMessageBox::critical(this, tr("Error"), msg);
+    QMessageBox::critical(this, tr("Error"), msg);
 }
 
 void PathEditor::showMessage()
 {
-	QMessageBox::information(this, tr("Information"), tr("Environment updated"));
+    QMessageBox::information(this, tr("Information"), tr("Environment updated"));
 }
 
 /**
