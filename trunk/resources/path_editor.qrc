@@ -1,0 +1,8 @@
+<RCC>
+    <qresource>
+        <file>../images/add.png</file>
+        <file>../images/remove.png</file>
+        <file>../images/up.png</file>
+        <file>../images/down.png</file>
+    </qresource>
+</RCC>
