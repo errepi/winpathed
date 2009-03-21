@@ -24,7 +24,7 @@
  */
 PathEditor::PathEditor(QWidget *parent, Qt::WindowFlags f) : QDialog(parent, f)
 {
-	// toolbar
+    // toolbar
     QFrame *toolbar = new QFrame;
     toolbar->setFrameStyle(QFrame::StyledPanel | QFrame::Plain);
     QPushButton *addBtn = initButton(":/images/add.png");
@@ -140,31 +140,31 @@ void PathEditor::itemDelete()
 
 void PathEditor::itemUp()
 {
-	QListWidgetItem *tmp = listWidget->currentItem();
-	if (tmp == NULL)
+    QListWidgetItem *tmp = listWidget->currentItem();
+    if (tmp == NULL)
         return;
-	int r = listWidget->row(tmp);
-	if (r == 0)
-	    return;
+    int r = listWidget->row(tmp);
+    if (r == 0)
+        return;
 
-	QListWidgetItem *other = listWidget->takeItem(r-1);
-	listWidget->insertItem(r, other);
-	listWidget->insertItem(r-1, tmp);
+    QListWidgetItem *other = listWidget->takeItem(r-1);
+    listWidget->insertItem(r, other);
+    listWidget->insertItem(r-1, tmp);
 }
 
 void PathEditor::itemDown()
 {
-	QListWidgetItem *tmp = listWidget->currentItem();
-	if (tmp == NULL)
-		return;
+    QListWidgetItem *tmp = listWidget->currentItem();
+    if (tmp == NULL)
+        return;
 
-	int r = listWidget->row(tmp);
-	if (r == listWidget->count()-1)
-		return;
+    int r = listWidget->row(tmp);
+    if (r == listWidget->count()-1)
+        return;
 
-	QListWidgetItem *other = listWidget->takeItem(r+1);
-	listWidget->insertItem(r, other);
-	listWidget->insertItem(r+1, tmp);
+    QListWidgetItem *other = listWidget->takeItem(r+1);
+    listWidget->insertItem(r, other);
+    listWidget->insertItem(r+1, tmp);
 }
 
 /**
@@ -173,20 +173,20 @@ void PathEditor::itemDown()
 void PathEditor::commit()
 {
     int count = listWidget->count();
-	QString s;
+    QString s;
 
     for (int i = 0; i < count; i++) {
-    	if (i != 0) s.append(';');
-    	s.append(listWidget->item(i)->text());
+        if (i != 0) s.append(';');
+        s.append(listWidget->item(i)->text());
     }
 
     int res = waSavePath(s);
 
     if (res == 0) {
-    	pathData = SPLIT_PATH(s);
-    	showMessage();
+        pathData = SPLIT_PATH(s);
+        showMessage();
     } else {
-    	showError(waFormatMessage(res));
+        showError(waFormatMessage(res));
     }
 }
 
