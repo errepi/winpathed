@@ -30,4 +30,5 @@ QString waFormatMessage(int code);
 void waRefreshEnvironment();
 
 
-#endif /*WIN_REGISTRY_H_*/
+#endif // WIN_REGISTRY_H_
+
