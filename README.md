@@ -1,6 +1,6 @@
-Ude is a C# port of Mozilla Universal Charset Detector.
+Ude is a C# port of [Mozilla Universal Charset Detector](http://mxr.mozilla.org/mozilla/source/extensions/universalchardet/src/).
 
-The article "A composite approach to language/encoding detection" describes the charsets detection algorithms implemented by the library.
+The article "[A composite approach to language/encoding detection](http://www.mozilla.org/projects/intl/UniversalCharsetDetection.html)" describes the charsets detection algorithms implemented by the library.
 
 Ude can recognize the following charsets:
 
@@ -28,20 +28,23 @@ Ude can recognize the following charsets:
 Windows and Linux (Mono)
 
 ## Install
-The release consists in the main library (Ude.dll) and a command-line client (udetect.exe) that can be used for one-shot tests.
+The release consists in the main library (*Ude.dll*) and a command-line client (*udetect.exe*) that can be used for one-shot tests.
 
 On Windows, compile the Visual Studio 2005 solution ude.sln. On Linux you can build the library, the example and the nunit tests with monodelop and its solution ude.mds, or using make. To compile the sources tarball:
 
     $ ./configure.sh --prefix=/usr/local --enable-tests=yes
     $ make
+    
 To compile from svn:
 
    $ ./autogen.sh --prefix=/usr/local --enable-tests=yes
    $ make
-You can pick the library (Ude.dll) from the toplevel build directory (./bin) or you can install it to $prefix/lib/ude by typing:
+   
+You can pick the library (*Ude.dll*) from the toplevel build directory (*./bin*) or you can install it to *$prefix/lib/ude* by typing:
 
    $ make install
-This will installs a command-line example program ($prefix/bin/udetect) to test the library on a given file as:
+   
+This will installs a command-line example program (*$prefix/bin/udetect*) to test the library on a given file as:
 
    $ udetect filename 
 To run the nunit tests type:
