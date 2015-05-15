@@ -2,7 +2,7 @@ A simple gui, written in QT4, to add, remove and move the PATH environment varia
 
 ## Platform
 
-Windows XP, Vista
+Windows XP, Vista, Windows 7
 
 ## Build
 
