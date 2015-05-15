@@ -6,7 +6,7 @@ Windows XP, Vista
 
 ## Build
 
-1. Get Qt4 and a C++ compiler.
-2. checkout the source code.
+1. Get [Qt4](http://www.qtsoftware.com/downloads) and a [C++ compiler](http://www.mingw.org/).
+2. [Get](https://github.com/errepi/winpathed.git) the source code.
 3. run qmake winpathed.pro && mingw32-make release.
 
